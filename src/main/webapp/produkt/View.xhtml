@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewProduktTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewProduktLabel_cenaBrutto}"/>
+                    <h:outputText value="#{produktController.selected.cenaBrutto}" title="#{bundle.ViewProduktTitle_cenaBrutto}"/>
+                    <h:outputText value="#{bundle.ViewProduktLabel_cenaNetto}"/>
+                    <h:outputText value="#{produktController.selected.cenaNetto}" title="#{bundle.ViewProduktTitle_cenaNetto}"/>
+                    <h:outputText value="#{bundle.ViewProduktLabel_id}"/>
+                    <h:outputText value="#{produktController.selected.id}" title="#{bundle.ViewProduktTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewProduktLabel_kategoria}"/>
+                    <h:outputText value="#{produktController.selected.kategoria}" title="#{bundle.ViewProduktTitle_kategoria}"/>
+                    <h:outputText value="#{bundle.ViewProduktLabel_nazwa}"/>
+                    <h:outputText value="#{produktController.selected.nazwa}" title="#{bundle.ViewProduktTitle_nazwa}"/>
+                    <h:outputText value="#{bundle.ViewProduktLabel_numerZamowienia}"/>
+                    <h:outputText value="#{produktController.selected.numerZamowienia}" title="#{bundle.ViewProduktTitle_numerZamowienia}"/>
+                    <h:outputText value="#{bundle.ViewProduktLabel_opis}"/>
+                    <h:outputText value="#{produktController.selected.opis}" title="#{bundle.ViewProduktTitle_opis}"/>
+                    <h:outputText value="#{bundle.ViewProduktLabel_waga}"/>
+                    <h:outputText value="#{produktController.selected.waga}" title="#{bundle.ViewProduktTitle_waga}"/>
+                    <h:outputText value="#{bundle.ViewProduktLabel_magazyn}"/>
+                    <h:outputText value="#{produktController.selected.magazyn}" title="#{bundle.ViewProduktTitle_magazyn}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{produktController.destroyAndView}" value="#{bundle.ViewProduktDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewProduktEditLink}"/>
+                <br />
+                <h:commandLink action="#{produktController.prepareCreate}" value="#{bundle.ViewProduktCreateLink}" />
+                <br />
+                <h:commandLink action="#{produktController.prepareList}" value="#{bundle.ViewProduktShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewProduktIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
