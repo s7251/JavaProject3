@@ -19,10 +19,6 @@ import org.kulkry.gromac.jee.ejb.PracownikFacade;
 import org.kulkry.gromac.jee.model.Administrator;
 import org.kulkry.gromac.jee.model.Pracownik;
 
-/**
- *
- * @author wnuk
- */
 @ManagedBean(name = "authorizationController")
 @RequestScoped
 public class AuthorizationController implements Serializable {

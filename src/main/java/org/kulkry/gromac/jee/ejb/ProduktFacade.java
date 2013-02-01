@@ -9,10 +9,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.kulkry.gromac.jee.model.Produkt;
 
-/**
- *
- * @author wnuk
- */
 @Stateless
 public class ProduktFacade extends AbstractFacade<Produkt> {
     @PersistenceContext(unitName = "JPU")

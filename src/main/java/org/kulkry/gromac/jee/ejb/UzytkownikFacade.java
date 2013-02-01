@@ -9,10 +9,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.kulkry.gromac.jee.model.Uzytkownik;
 
-/**
- *
- * @author wnuk
- */
 @Stateless
 public class UzytkownikFacade extends AbstractFacade<Uzytkownik> {
     @PersistenceContext(unitName = "JPU")

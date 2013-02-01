@@ -9,10 +9,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.kulkry.gromac.jee.model.Magazyn;
 
-/**
- *
- * @author wnuk
- */
 @Stateless
 public class MagazynFacade extends AbstractFacade<Magazyn> {
     @PersistenceContext(unitName = "JPU")

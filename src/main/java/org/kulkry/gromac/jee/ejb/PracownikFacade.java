@@ -11,10 +11,6 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import org.kulkry.gromac.jee.model.Pracownik;
 
-/**
- *
- * @author wnuk
- */
 @Stateless
 public class PracownikFacade extends AbstractFacade<Pracownik> {
     @PersistenceContext(unitName = "JPU")

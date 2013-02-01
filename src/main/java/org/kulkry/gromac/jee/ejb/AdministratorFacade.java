@@ -11,10 +11,6 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import org.kulkry.gromac.jee.model.Administrator;
 
-/**
- *
- * @author wnuk
- */
 @Stateless
 public class AdministratorFacade extends AbstractFacade<Administrator> {
     @PersistenceContext(unitName = "JPU")

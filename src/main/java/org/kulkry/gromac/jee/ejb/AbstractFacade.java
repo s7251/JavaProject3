@@ -7,10 +7,7 @@ package org.kulkry.gromac.jee.ejb;
 import java.util.List;
 import javax.persistence.EntityManager;
 
-/**
- *
- * @author wnuk
- */
+
 public abstract class AbstractFacade<T> {
     private Class<T> entityClass;
 
