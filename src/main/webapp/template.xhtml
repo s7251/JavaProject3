@@ -29,6 +29,7 @@
                 </div>
             </div>
             <div id="page">
+                <h:form><p>Zalogowano: #{session.getAttribute("authenticated")} - <h:commandLink value="wyloguj" action="#{authorizationController.logout}"/></p></h:form>
                 <div id="content">
                     <h1>
                         <ui:insert name="title">Default Title</ui:insert>
